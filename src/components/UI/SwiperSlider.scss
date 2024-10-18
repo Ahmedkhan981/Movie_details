@@ -1,0 +1,12 @@
+
+.Sliderimage {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+	object-position: center;
+}
+.custom-next,.custom-prev{
+	display: block;
+	@apply w-20 h-48;
+}

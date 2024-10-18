@@ -1,0 +1,31 @@
+@use "sass:color";
+@use "sass:string";
+@import "_mixin.scss";
+@import "./common";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: nth($colors, 1);
+    color: nth($colors, 2);
+    overflow-x: hidden;
+}
+@keyframes spin {
+    to {
+    transform: rotate(360deg);
+    }
+}
+.animate-spins {
+    animation: spin 2s linear infinite;
+    border-width: 10px;
+}

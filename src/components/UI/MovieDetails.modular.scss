@@ -1,0 +1,27 @@
+@import "../../style/mixin";
+.img{
+    width: calc(300/16*1rem);
+    max-width: calc(300/16*1rem);
+    height: calc(450/16*1rem);
+}
+.Parent{
+  @include flex-box(column);
+  width: 100%;
+  height: 100%;
+}
+.para{
+  @apply px-2;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .para{
+
+    font-size: 1.2rem;
+  }
+}
+.double-underline {
+  text-decoration: underline;
+  text-decoration-color: black; /* Set the underline color */
+  text-decoration-thickness: 2px; /* Adjust thickness */
+  text-decoration: underline double; /* Creates a double underline */
+}

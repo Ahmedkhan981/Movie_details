@@ -1,0 +1,24 @@
+.footer-link {
+  position: relative;
+  text-decoration: none; /* Remove default underline */
+  color: black; /* Default text color */
+}
+
+.footer-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px; /* Position the line under the text */
+  height: 2px; /* Line thickness */
+  background: transparent; /* Start with a transparent background */
+  transition: background 0.3s ease; /* Animate the background */
+  width: 100%; /* Ensure the line covers the entire text */
+  transform: scaleX(0); /* Initially hide the line */
+  transform-origin: left; /* Set the origin for scaling */
+}
+
+.footer-link:hover::after {
+  background: white; /* Change to white on hover */
+  transform: scaleX(1); /* Show the line on hover */
+}
